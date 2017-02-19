@@ -29,6 +29,8 @@ namespace ServerMultiRoom
             {
                 activeList.Add(namecreator);
                 pasive.Add(nameinvited, 0);
+                FileStream fs = File.Create("logs/" + namecreator.name + "+" + nameinvited.name + ".txt");
+                fs.Close();
                 Request req = new Request("enter", namecreator.name + "+" + nameinvited.name, "nomissed");
                 StreamWriter sq = new StreamWriter(namecreator.netStream);
                 sq.WriteLine(JsonConvert.SerializeObject(req));
@@ -46,6 +48,11 @@ namespace ServerMultiRoom
         public string Add(Client client, string room)
         {
             Request req = null;
+            if(activeList.Contains(client))
+            {
+                req = new Request("alreadyenter", null, null);
+                return JsonConvert.SerializeObject(req);
+            }
             if (!pasive.ContainsKey(client))
             {
                 req = new Request("enter", room, "nomissed");
@@ -127,7 +134,7 @@ namespace ServerMultiRoom
                 for (int i = 0; i < pasive.Count; i++)
                 {
                     int a = pasive[pasive.Keys.ElementAt(i)];
-                    Request req = new Request("pofig",name,(str.Length - a).ToString(), privateroom.ToString());
+                    Request req = new Request("passive",name,(str.Length - a).ToString(), privateroom.ToString());
 
                     StreamWriter writer = new StreamWriter(pasive.Keys.ElementAt(i).netStream);
                     writer.WriteLine(JsonConvert.SerializeObject(req));
@@ -136,20 +143,19 @@ namespace ServerMultiRoom
             }
         }
 
-        public void SendForPassivOne(int index)
+        public void SendForPassivOne(int index, Client user)
         {
             if (File.Exists(("logs/" + name + ".txt")))
             {
                 string[] str = File.ReadAllLines("logs/" + name + ".txt");
-
                 if(index == pasive.Count)
                 {
                     index = index - 1;
                 }
-                int a = pasive[pasive.Keys.ElementAt(index)];
-                Request req = new Request("pofig", name, (str.Length - a).ToString(), privateroom.ToString());
+                int a = pasive[user];
+                Request req = new Request("passive", name, (str.Length - a).ToString(), privateroom.ToString());
 
-                StreamWriter writer = new StreamWriter(pasive.Keys.ElementAt(index).netStream);
+                StreamWriter writer = new StreamWriter(user.netStream);
                 writer.WriteLine(JsonConvert.SerializeObject(req));
                 writer.Flush();
             }
@@ -157,8 +163,7 @@ namespace ServerMultiRoom
 
         public void Exit(Client client)
         {
-            activeList.Remove(client);
-            pasive.Remove(client);
+            activeList.Remove(client); 
         }
         public void Log(string message)
         {

@@ -21,10 +21,10 @@ namespace ServerMultiRoom
             switch (req.command)
             {
                 case "refresh":
-                    server.SetRoom(server.clientsList,server.rooms,index);
+                    server.SetRoom(index);
                     break;
                 case "refreshclients":
-                    server.SetClient(server.clientsList, index);
+                    server.SetClient(index);
                     break;
                 case "ban":
                     admin.BanUser(req.data, req.time);
@@ -33,8 +33,6 @@ namespace ServerMultiRoom
                     admin.Unban(req.data);
                     break;
             }
-        }
-            
-
+        }            
     }
 }

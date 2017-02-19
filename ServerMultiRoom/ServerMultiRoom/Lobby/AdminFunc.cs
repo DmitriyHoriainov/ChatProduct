@@ -38,7 +38,6 @@ namespace ServerMultiRoom
                 }
                 FileStream fs = File.Create("banlist.txt");
                 fs.Close();
-
                 for (int i = 0; i < strnew.Count; i++)
                 {
                     File.AppendAllText("banlist.txt", strnew.ElementAt(i) + "\r\n");

@@ -36,6 +36,7 @@ namespace MyNewChatClient
             }
             
         }
+
         public void Listen()
         {
             while(true)
@@ -49,47 +50,10 @@ namespace MyNewChatClient
                     switch (req.modul)
                     {
                         case "ok":
-                            if (req.data == "admin")
-                            {
-                                form1.btn_ban.BeginInvoke(new InvokeDelegate(form1.VisibleBan));
-                                form1.btn_unban.BeginInvoke(new InvokeDelegate(form1.VisibeUnban));
-                            }
+                            CaseOk(req.data);
                             break;
                         case "enter":
-                            rd = new RoomDialog(client, form1.request);
-                            rd.room.name = req.command;
-                            rd.Text = req.command;
-                            string[] str = req.data.Split(',');
-                            if (str[0] == "missed")
-                            {
-                                string[] tmp = str[1].Split('.');
-                                for (int i = 0; i < tmp.Length; i++)
-                                {
-                                    rd.rtb_message.Text += tmp[i] + "\n";
-                                }
-                            }
-                            Thread tr = new Thread(new ThreadStart(OpenForm));
-                            tr.Start();
-                            Thread.Sleep(100);
-                            if (str.Length > 1)
-                            {
-                                string[] tmp = rd.rtb_message.Text.Split('\n');
-                                for (int i = Convert.ToInt32(req.time); i < tmp.Length; i++)
-                                {
-                                    string str11 = tmp[i];
-                                    int j = 0;
-                                    while (j < rd.rtb_message.Text.Length - str11.Length)
-                                    {
-                                        j = rd.rtb_message.Text.IndexOf(str11, j);
-                                        if (j <= 0) break;
-                                        rd.rtb_message.SelectionStart = j;
-                                        rd.rtb_message.SelectionLength = str11.Length;
-                                        rd.rtb_message.SelectionColor = Color.Red;
-                                        j += str11.Length;
-                                    }
-
-                                }
-                            }
+                            CaseEnter(req.command, req.data, req.time);
                             break;
                         case "leave":
                             rd.Close();
@@ -98,21 +62,10 @@ namespace MyNewChatClient
                             MessageBox.Show("You have been banned for " + req.data);
                             break;
                         case "refresh":
-                            string[] splitrooms = req.data.Split('.');
-                            if (splitrooms[0] == "")
-                            {
-                                break;
-                            }
-                            form1.lst_rooms.Items.Clear();
-                            form1.lst_rooms.Items.AddRange(splitrooms);
+                            CaseRefresh(req.data);
                             break;
                         case "refreshclients":
-                            string[] splitclients = req.data.Split('.');
-                            form1.lst_clients.Items.Clear();
-                            if (splitclients[0] != "")
-                            {
-                                form1.lst_clients.Items.AddRange(splitclients);
-                            }
+                            CaseRefreshClients(req.data);
                             break;
                         case "message":
                             rd.rtb_message.Text += req.data + "\n";
@@ -123,78 +76,120 @@ namespace MyNewChatClient
                         case "wrongroom":
                             MessageBox.Show("Error, room " + req.data + " has already been created.");
                             break;
-                        //case "wrongprivateroom":
-                        //    MessageBox.Show("Error, privateroom " + req.data + " has already been created.");
-                        //    break;
-                        case "pofig":
-                            int a = -1;
-                            for (int i = 0; i < form1.lst_rooms.Items.Count; i++)
-                            {
-                                string[] str1 = form1.lst_rooms.Items[i].ToString().Split(' ');
-                                if (str1[0] == req.command)
-                                    a = i;
-                            }
-                            if (a != -1)
-                            {
-                                form1.lst_rooms.Items.RemoveAt(a);
-                                if (req.data == "0" && req.time != "True")
-                                    form1.lst_rooms.Items.Insert(a, req.command + "  ");
-                                else if(req.data != "0")
-                                    form1.lst_rooms.Items.Insert(a, req.command + "   +" + req.data);
-                            }
-                            else
-                                form1.lst_rooms.Items.Insert(form1.lst_rooms.Items.Count, req.command + "   +" + req.data);
+                        case "alreadyenter":
+                            MessageBox.Show("You are already logged into this room.");
+                            break;
+                        case "passive":
+                            CasePassive(req.command, req.data, req.time);
                             break;
                     }
                 }
-                catch(Exception ex)
-                {
-                    MessageBox.Show("Host lost connection");
+                catch (Exception ex)
+                {                   
                     return;
+                }
+            }
+        } 
+        
+        private void CaseOk(string dat)
+        {
+            string[] data = dat.Split(',');
+            form1.lb_name.Text = data[0];
+            Thread.Sleep(150);
+            if (data[0] == "admin")
+            {
+                form1.btn_ban.BeginInvoke(new InvokeDelegate(form1.VisibleBan));
+                form1.btn_unban.BeginInvoke(new InvokeDelegate(form1.VisibeUnban));
+            }
+        }     
+
+        private void CaseEnter(string cmd, string dat, string tm)
+        {
+            rd = new RoomDialog(client, form1.request);
+
+            rd.room.name = cmd;
+            if (rd.room.name.Contains("+"))
+                rd.btn_exit.Enabled = false;
+            else
+                rd.btn_exit.Enabled = true;
+            rd.Text = cmd;
+            string[] str = dat.Split(',');
+            if (str[0] == "missed")
+            {
+                string[] tmp = str[1].Split('.');
+                for (int i = 0; i < tmp.Length; i++)
+                {
+                    rd.rtb_message.Text += tmp[i] + "\n";
+                }
+            }
+            Thread tr = new Thread(new ThreadStart(OpenForm));
+            tr.Start();
+            Thread.Sleep(100);
+            if (str.Length > 1)
+            {
+                string[] tmp = rd.rtb_message.Text.Split('\n');
+                for (int i = Convert.ToInt32(tm); i < tmp.Length; i++)
+                {
+                    string str11 = tmp[i];
+                    int j = 0;
+                    while (j < rd.rtb_message.Text.Length - str11.Length)
+                    {
+                        j = rd.rtb_message.Text.IndexOf(str11, j);
+                        if (j <= 0) break;
+                        rd.rtb_message.SelectionStart = j;
+                        rd.rtb_message.SelectionLength = str11.Length;
+                        rd.rtb_message.SelectionColor = Color.Red;
+                        j += str11.Length;
+                    }
                 }
             }
         }
 
-
-        public void lst_rooms_DrawItem(object sender, DrawItemEventArgs e)
+        private void CaseRefresh(string dat)
         {
-            // Draw the background of the ListBox control for each item.
-            e.DrawBackground();
-            // Define the default color of the brush as black.
-            Brush myBrush = Brushes.Black;
-
-            Font myFont = new Font(form1.lst_rooms.Font.Name, form1.lst_rooms.Font.Size,
-                FontStyle.Bold, form1.lst_rooms.Font.Unit);
-
-            // Determine the color of the brush to draw each item based 
-            // on the index of the item to draw.
-            switch (e.Index)
+            string[] splitrooms = dat.Split('.');
+            if (splitrooms[0] == "")
             {
-                case 0:
-                    myBrush = Brushes.Red;
-                    break;
-                case 1:
-                    myBrush = Brushes.Orange;
-                    break;
-                case 2:
-                    myBrush = Brushes.Purple;
-                    break;
+                return;
             }
-
-            // Draw the current item text based on the current Font 
-            // and the custom brush settings.
-            string[] tmp = form1.lst_rooms.Items[e.Index].ToString().Split(' ');
-            if (!(e.Index == form1.lst_rooms.Items.Count))
+            form1.lst_rooms.Items.Clear();
+            for (int i = 0; i < splitrooms.Length; i++)
             {
-                if (tmp.Length == 1)
-                    e.Graphics.DrawString(form1.lst_rooms.Items[e.Index].ToString(),
-                    form1.lst_rooms.Font, Brushes.Black, e.Bounds, StringFormat.GenericDefault);
-                else
-                    e.Graphics.DrawString(form1.lst_rooms.Items[e.Index].ToString(),
-                   myFont, Brushes.Black, e.Bounds, StringFormat.GenericDefault);
+                if (!(splitrooms[i].Contains("+")))
+                    form1.lst_rooms.Items.Add(splitrooms[i]);
             }
-            // If the ListBox has focus, draw a focus rectangle around the selected item.
-            e.DrawFocusRectangle();
+        }
+
+        private void CaseRefreshClients(string dat)
+        {
+            string[] splitclients = dat.Split('.');
+            form1.lst_clients.Items.Clear();
+            if (splitclients[0] != "")
+            {
+                form1.lst_clients.Items.AddRange(splitclients);
+            }
+        }
+
+        private void CasePassive(string cmd, string dat, string tm)
+        {
+            int a = -1;
+            for (int i = 0; i < form1.lst_rooms.Items.Count; i++)
+            {
+                string[] str1 = form1.lst_rooms.Items[i].ToString().Split(' ');
+                if (str1[0] == cmd)
+                    a = i;
+            }
+            if (a != -1)
+            {
+                form1.lst_rooms.Items.RemoveAt(a);
+                if (dat == "0" && tm != "True")
+                    form1.lst_rooms.Items.Insert(a, cmd + "  ");
+                else if (dat != "0")
+                    form1.lst_rooms.Items.Insert(a, cmd + "   +" + dat);
+            }
+            else
+                if (dat != "0")
+                form1.lst_rooms.Items.Insert(form1.lst_rooms.Items.Count, cmd + "   +" + dat);
         }
     }
 }

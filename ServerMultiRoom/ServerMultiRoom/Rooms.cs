@@ -24,93 +24,125 @@ namespace ServerMultiRoom
             switch (req.command)
             {
                 case "createroom":
-                    if (IsBanned(srv.clientsList.ElementAt(index)))
-                    {
-                        Request req2 = new Request("bancreate", null, BanTime(srv.clientsList.ElementAt(index)));
-                        string responce2 = JsonConvert.SerializeObject(req2);
-
-                        writer = new StreamWriter(srv.clientsList.ElementAt(index).netStream);
-                        writer.WriteLine(responce2);
-                        writer.Flush();
-                        break;
-                    }
-                    if (File.Exists("logs/" + req.data + ".txt"))
-                    {
-                        Request req2 = new Request("wrongroom", null, req.data);
-                        string responce2 = JsonConvert.SerializeObject(req2);
-
-                        writer = new StreamWriter(srv.clientsList.ElementAt(index).netStream);
-                        writer.WriteLine(responce2);
-                        writer.Flush();
-                        break;
-                    }
-                    FileStream fs = File.Create("logs/" + req.data + ".txt");
-                    fs.Close();
-                    roomList.Add(new Room(req.data));
-                    if (srv.clientsList.Find(c => c.name == "admin") != null)
-                    {
-                        roomList.Find(c => c.name == req.data).AddPassive(srv.clientsList.Find(c => c.name == "admin"));
-                    }
-                    Thread.Sleep(100);
-                    srv.SetRoom(srv.clientsList, srv.rooms, index);
+                    CaseCreateRoom(index, req.data);
                     break;
-
                 case "leave":
-                    roomList.Find(c => c.name == req.data).Leave(srv.clientsList.ElementAt(index));
-
-                    Request request = new Request("leave", null, null);
-                    string responce = JsonConvert.SerializeObject(request);
-
-                    writer = new StreamWriter(srv.clientsList.ElementAt(index).netStream);
-                    writer.WriteLine(responce);
-                    writer.Flush();
+                    CaseLeave(index, req.data);
                     break;
                 case "exit":
-                    roomList.Find(c => c.name == req.data).Exit(srv.clientsList.ElementAt(index));
-
-                    Request request1 = new Request("leave", null, null);
-                    string responce1 = JsonConvert.SerializeObject(request1);
-
-                    writer = new StreamWriter(srv.clientsList.ElementAt(index).netStream);
-                    writer.WriteLine(responce1);
-                    writer.Flush();
+                    CaseExit(index, req.data);
                     break;
                 case "enter":
-                    writer = new StreamWriter(srv.clientsList.ElementAt(index).netStream);
-                    writer.WriteLine(roomList.Find(c => c.name == req.data).Add(srv.clientsList.ElementAt(index), req.data));
-                    writer.Flush();
-                    Thread.Sleep(100);
-                    srv.SetRoom(srv.clientsList, srv.rooms, index);
+                    CaseEnter(index, req.data);
                     break;
                 case "message":
-                    if (!IsBanned(srv.clientsList.ElementAt(index)) || roomList.Find(c => c.name == req.time).privateroom)
-                        roomList.Find(c => c.name == req.time).BroadCast(srv.clientsList.ElementAt(index).name, req.data);
-                    if (IsBanned(srv.clientsList.ElementAt(index)))
-                    {
-                        Request req1 = new Request("youbanned", null, "you are banned to " + BanTime(srv.clientsList.ElementAt(index)));
-                        string resp = JsonConvert.SerializeObject(req1);
-
-                        writer = new StreamWriter(srv.clientsList.ElementAt(index).netStream);
-                        writer.WriteLine(resp);
-                        writer.Flush();
-                    }
+                    CaseMessage(index, req.data, req.time);
                     break;
                 case "privateroom":
-                    if (!File.Exists("logs/" + srv.clientsList.ElementAt(index).name + "+" + req.data + ".txt"))
-                    {
-                        roomList.Add(new Room(srv.clientsList.ElementAt(index).name + "+" + req.data));
-                        roomList.Last().privateroom = true;
-                        roomList.Find(c => c.name == srv.clientsList.ElementAt(index).name + "+" + req.data).CreatePrivate(srv.clientsList.ElementAt(index), srv.clientsList.Find(c => c.name == req.data));
-                    }
-                    else
-                    {
-                        writer = new StreamWriter(srv.clientsList.ElementAt(index).netStream);
-                        writer.WriteLine(roomList.Find(c => c.name == srv.clientsList.ElementAt(index).name + "+" + req.data).Add(srv.clientsList.ElementAt(index), srv.clientsList.ElementAt(index).name + "+" + req.data));
-                        writer.Flush();
-                    }
+                    CasePrivateRoom(index, req.data);
                     break;
             }
         }
+
+        private void CaseCreateRoom(int index, string dat)
+        {
+            if (IsBanned(srv.clientsList.ElementAt(index)))
+            {
+                Request req2 = new Request("bancreate", null, BanTime(srv.clientsList.ElementAt(index)));
+                string responce2 = JsonConvert.SerializeObject(req2);
+
+                StreamWriter writer = new StreamWriter(srv.clientsList.ElementAt(index).netStream);
+                writer.WriteLine(responce2);
+                writer.Flush();
+                return;
+            }
+            if (File.Exists("logs/" + dat + ".txt"))
+            {
+                Request req2 = new Request("wrongroom", null, dat);
+                string responce2 = JsonConvert.SerializeObject(req2);
+
+                StreamWriter writer = new StreamWriter(srv.clientsList.ElementAt(index).netStream);
+                writer.WriteLine(responce2);
+                writer.Flush();
+                return;
+            }
+            FileStream fs = File.Create("logs/" + dat + ".txt");
+            fs.Close();
+            roomList.Add(new Room(dat));
+            if (srv.clientsList.Find(c => c.name == "admin") != null)
+            {
+                roomList.Find(c => c.name == dat).AddPassive(srv.clientsList.Find(c => c.name == "admin"));
+            }
+            Thread.Sleep(100);
+            srv.SetRoom(index);
+        }
+
+        private void CaseLeave(int index, string dat)
+        {
+            roomList.Find(c => c.name == dat).Leave(srv.clientsList.ElementAt(index));
+
+            Request request = new Request("leave", null, null);
+            string responce = JsonConvert.SerializeObject(request);
+
+            StreamWriter writer = new StreamWriter(srv.clientsList.ElementAt(index).netStream);
+            writer.WriteLine(responce);
+            writer.Flush();
+            Thread.Sleep(100);
+            srv.SetRoom(index);
+        }
+
+        private void CaseExit(int index, string dat)
+        {
+            roomList.Find(c => c.name == dat).Exit(srv.clientsList.ElementAt(index));
+
+            Request request1 = new Request("leave", null, null);
+            string responce1 = JsonConvert.SerializeObject(request1);
+
+            StreamWriter writer = new StreamWriter(srv.clientsList.ElementAt(index).netStream);
+            writer.WriteLine(responce1);
+            writer.Flush();
+        }
+
+        private void CaseEnter(int index, string dat)
+        {
+            StreamWriter writer = new StreamWriter(srv.clientsList.ElementAt(index).netStream);
+            writer.WriteLine(roomList.Find(c => c.name == dat).Add(srv.clientsList.ElementAt(index), dat));
+            writer.Flush();
+            Thread.Sleep(100);
+            srv.SetRoom(index);
+        }
+
+        private void CaseMessage(int index, string dat, string tm)
+        {
+            if (!IsBanned(srv.clientsList.ElementAt(index)) || roomList.Find(c => c.name == tm).privateroom)
+                roomList.Find(c => c.name == tm).BroadCast(srv.clientsList.ElementAt(index).name, dat);
+            else if (IsBanned(srv.clientsList.ElementAt(index)))
+            {
+                Request req1 = new Request("youbanned", null, "you are banned to " + BanTime(srv.clientsList.ElementAt(index)));
+                string resp = JsonConvert.SerializeObject(req1);
+
+                StreamWriter writer = new StreamWriter(srv.clientsList.ElementAt(index).netStream);
+                writer.WriteLine(resp);
+                writer.Flush();
+            }
+        }
+
+        private void CasePrivateRoom(int index, string dat)
+        {
+            if (!File.Exists("logs/" + srv.clientsList.ElementAt(index).name + "+" + dat + ".txt"))
+            {
+                roomList.Add(new Room(srv.clientsList.ElementAt(index).name + "+" + dat));
+                roomList.Last().privateroom = true;
+                roomList.Find(c => c.name == srv.clientsList.ElementAt(index).name + "+" + dat).CreatePrivate(srv.clientsList.ElementAt(index), srv.clientsList.Find(c => c.name == dat));
+            }
+            else
+            {
+                StreamWriter writer = new StreamWriter(srv.clientsList.ElementAt(index).netStream);
+                writer.WriteLine(roomList.Find(c => c.name == srv.clientsList.ElementAt(index).name + "+" + dat).Add(srv.clientsList.ElementAt(index), srv.clientsList.ElementAt(index).name + "+" + dat));
+                writer.Flush();
+            }
+        }
+
         public bool IsBanned(Client client)
         {
             bool flag = false;

@@ -70,7 +70,7 @@
             this.rtb_message.Name = "rtb_message";
             this.rtb_message.Size = new System.Drawing.Size(475, 295);
             this.rtb_message.TabIndex = 4;
-            this.rtb_message.Text = "";          
+            this.rtb_message.Text = "";
             // 
             // btn_exit
             // 
@@ -110,6 +110,6 @@
         private System.Windows.Forms.Button btn_send;
         private System.Windows.Forms.TextBox txt_msg;
         public System.Windows.Forms.RichTextBox rtb_message;
-        private System.Windows.Forms.Button btn_exit;
+        public System.Windows.Forms.Button btn_exit;
     }
 }

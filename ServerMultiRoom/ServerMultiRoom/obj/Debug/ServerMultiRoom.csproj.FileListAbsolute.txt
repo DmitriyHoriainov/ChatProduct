@@ -45,3 +45,11 @@ E:\GithubChat\ChatProduct\ServerMultiRoom\ServerMultiRoom\bin\Debug\ServerMultiR
 E:\GithubChat\ChatProduct\ServerMultiRoom\ServerMultiRoom\bin\Debug\Newtonsoft.Json.dll
 E:\GithubChat\ChatProduct\ServerMultiRoom\ServerMultiRoom\bin\Debug\Newtonsoft.Json.xml
 E:\GithubChat\ChatProduct\ServerMultiRoom\ServerMultiRoom\obj\Debug\ServerMultiRoom.csprojResolveAssemblyReference.cache
+E:\GithubChat\ChatProduct\ServerMultiRoom\ServerMultiRoom\bin\Debug\EntityFramework.dll
+E:\GithubChat\ChatProduct\ServerMultiRoom\ServerMultiRoom\bin\Debug\EntityFramework.SqlServer.dll
+E:\GithubChat\ChatProduct\ServerMultiRoom\ServerMultiRoom\bin\Debug\System.Data.SQLite.dll
+E:\GithubChat\ChatProduct\ServerMultiRoom\ServerMultiRoom\bin\Debug\System.Data.SQLite.EF6.dll
+E:\GithubChat\ChatProduct\ServerMultiRoom\ServerMultiRoom\bin\Debug\System.Data.SQLite.Linq.dll
+E:\GithubChat\ChatProduct\ServerMultiRoom\ServerMultiRoom\bin\Debug\EntityFramework.xml
+E:\GithubChat\ChatProduct\ServerMultiRoom\ServerMultiRoom\bin\Debug\EntityFramework.SqlServer.xml
+E:\GithubChat\ChatProduct\ServerMultiRoom\ServerMultiRoom\bin\Debug\System.Data.SQLite.xml

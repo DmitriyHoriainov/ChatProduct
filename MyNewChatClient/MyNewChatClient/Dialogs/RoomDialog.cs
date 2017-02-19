@@ -25,10 +25,12 @@ namespace MyNewChatClient
             if (txt_msg.Text == "")
             {
                 MessageBox.Show("Please enter message.");
+                return;
             }
             if (txt_msg.Text.Length > 500)
             {
                 MessageBox.Show("Please enter message lesser then 500 symbols.");
+                return;
             }
             else
             {

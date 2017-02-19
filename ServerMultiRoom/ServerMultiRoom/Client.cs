@@ -13,30 +13,24 @@ namespace ServerMultiRoom
         public TcpClient client;
         public NetworkStream netStream;
         StreamReader sr;
+
         public Client(TcpClient client)
         {
             this.client = client;
             netStream = client.GetStream();
-            sr = new StreamReader(client.GetStream());
-            GetName();           
+            sr = new StreamReader(client.GetStream());        
         }
+    
 
-        public void GetName()
+        public string[] GetLogPass()
         {
-            name = sr.ReadLine();
+            string message = sr.ReadLine();
+            Request name = JsonConvert.DeserializeObject<Request>(message);
             StreamWriter sw = new StreamWriter(client.GetStream());
-            Request req;
-            if (name == "admin")
-            {
-                req = new Request("ok", null, "admin");
-            }
-            else
-            {
-                req = new Request("ok", null, null);
-            }
-            sw.WriteLine(JsonConvert.SerializeObject(req));
-            sw.Flush();
 
+            string[] logpass = name.data.Split(',');
+            this.name = logpass[0];
+            return logpass;
         }
 
         public string Read()

@@ -44,6 +44,9 @@
             this.lb_rooms = new System.Windows.Forms.Label();
             this.lb_clients = new System.Windows.Forms.Label();
             this.lb_name = new System.Windows.Forms.Label();
+            this.txt_password = new System.Windows.Forms.TextBox();
+            this.ps_hint = new System.Windows.Forms.Label();
+            this.btn_reg = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_login
@@ -77,7 +80,7 @@
             // lst_rooms
             // 
             this.lst_rooms.FormattingEnabled = true;
-            this.lst_rooms.Location = new System.Drawing.Point(12, 78);
+            this.lst_rooms.Location = new System.Drawing.Point(12, 109);
             this.lst_rooms.Name = "lst_rooms";
             this.lst_rooms.Size = new System.Drawing.Size(184, 238);
             this.lst_rooms.TabIndex = 3;
@@ -85,7 +88,7 @@
             // 
             // btn_refresh_rooms
             // 
-            this.btn_refresh_rooms.Location = new System.Drawing.Point(37, 380);
+            this.btn_refresh_rooms.Location = new System.Drawing.Point(37, 411);
             this.btn_refresh_rooms.Name = "btn_refresh_rooms";
             this.btn_refresh_rooms.Size = new System.Drawing.Size(135, 23);
             this.btn_refresh_rooms.TabIndex = 4;
@@ -96,7 +99,7 @@
             // 
             // btn_create_room
             // 
-            this.btn_create_room.Location = new System.Drawing.Point(37, 322);
+            this.btn_create_room.Location = new System.Drawing.Point(37, 353);
             this.btn_create_room.Name = "btn_create_room";
             this.btn_create_room.Size = new System.Drawing.Size(135, 23);
             this.btn_create_room.TabIndex = 5;
@@ -107,7 +110,7 @@
             // 
             // btn_room_enter
             // 
-            this.btn_room_enter.Location = new System.Drawing.Point(37, 351);
+            this.btn_room_enter.Location = new System.Drawing.Point(37, 382);
             this.btn_room_enter.Name = "btn_room_enter";
             this.btn_room_enter.Size = new System.Drawing.Size(135, 23);
             this.btn_room_enter.TabIndex = 6;
@@ -119,7 +122,7 @@
             // lst_clients
             // 
             this.lst_clients.FormattingEnabled = true;
-            this.lst_clients.Location = new System.Drawing.Point(213, 78);
+            this.lst_clients.Location = new System.Drawing.Point(216, 109);
             this.lst_clients.Name = "lst_clients";
             this.lst_clients.Size = new System.Drawing.Size(120, 238);
             this.lst_clients.TabIndex = 7;
@@ -127,7 +130,7 @@
             // 
             // btn_private
             // 
-            this.btn_private.Location = new System.Drawing.Point(211, 336);
+            this.btn_private.Location = new System.Drawing.Point(215, 353);
             this.btn_private.Name = "btn_private";
             this.btn_private.Size = new System.Drawing.Size(121, 23);
             this.btn_private.TabIndex = 8;
@@ -138,7 +141,7 @@
             // 
             // btn_refresh_clients
             // 
-            this.btn_refresh_clients.Location = new System.Drawing.Point(213, 380);
+            this.btn_refresh_clients.Location = new System.Drawing.Point(216, 411);
             this.btn_refresh_clients.Name = "btn_refresh_clients";
             this.btn_refresh_clients.Size = new System.Drawing.Size(120, 23);
             this.btn_refresh_clients.TabIndex = 9;
@@ -149,7 +152,7 @@
             // 
             // btn_ban
             // 
-            this.btn_ban.Location = new System.Drawing.Point(212, 419);
+            this.btn_ban.Location = new System.Drawing.Point(216, 448);
             this.btn_ban.Name = "btn_ban";
             this.btn_ban.Size = new System.Drawing.Size(120, 23);
             this.btn_ban.TabIndex = 10;
@@ -160,7 +163,7 @@
             // 
             // btn_unban
             // 
-            this.btn_unban.Location = new System.Drawing.Point(213, 448);
+            this.btn_unban.Location = new System.Drawing.Point(217, 477);
             this.btn_unban.Name = "btn_unban";
             this.btn_unban.Size = new System.Drawing.Size(119, 23);
             this.btn_unban.TabIndex = 11;
@@ -181,7 +184,7 @@
             // lb_rooms
             // 
             this.lb_rooms.AutoSize = true;
-            this.lb_rooms.Location = new System.Drawing.Point(9, 62);
+            this.lb_rooms.Location = new System.Drawing.Point(9, 93);
             this.lb_rooms.Name = "lb_rooms";
             this.lb_rooms.Size = new System.Drawing.Size(40, 13);
             this.lb_rooms.TabIndex = 14;
@@ -191,7 +194,7 @@
             // lb_clients
             // 
             this.lb_clients.AutoSize = true;
-            this.lb_clients.Location = new System.Drawing.Point(210, 62);
+            this.lb_clients.Location = new System.Drawing.Point(212, 93);
             this.lb_clients.Name = "lb_clients";
             this.lb_clients.Size = new System.Drawing.Size(34, 13);
             this.lb_clients.TabIndex = 15;
@@ -208,11 +211,40 @@
             this.lb_name.Text = "Nickname";
             this.lb_name.Visible = false;
             // 
+            // txt_password
+            // 
+            this.txt_password.Location = new System.Drawing.Point(12, 70);
+            this.txt_password.Name = "txt_password";
+            this.txt_password.Size = new System.Drawing.Size(135, 20);
+            this.txt_password.TabIndex = 17;
+            // 
+            // ps_hint
+            // 
+            this.ps_hint.AutoSize = true;
+            this.ps_hint.Location = new System.Drawing.Point(10, 54);
+            this.ps_hint.Name = "ps_hint";
+            this.ps_hint.Size = new System.Drawing.Size(80, 13);
+            this.ps_hint.TabIndex = 18;
+            this.ps_hint.Text = "Enter password";
+            // 
+            // btn_reg
+            // 
+            this.btn_reg.Location = new System.Drawing.Point(212, 67);
+            this.btn_reg.Name = "btn_reg";
+            this.btn_reg.Size = new System.Drawing.Size(121, 23);
+            this.btn_reg.TabIndex = 19;
+            this.btn_reg.Text = "Registration";
+            this.btn_reg.UseVisualStyleBackColor = true;
+            this.btn_reg.Click += new System.EventHandler(this.btn_reg_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(341, 483);
+            this.ClientSize = new System.Drawing.Size(341, 512);
+            this.Controls.Add(this.btn_reg);
+            this.Controls.Add(this.ps_hint);
+            this.Controls.Add(this.txt_password);
             this.Controls.Add(this.lb_name);
             this.Controls.Add(this.lb_clients);
             this.Controls.Add(this.lb_rooms);
@@ -229,8 +261,10 @@
             this.Controls.Add(this.txt_name);
             this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.btn_login);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Chat";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,7 +287,10 @@
         private System.Windows.Forms.Label lb_hint;
         private System.Windows.Forms.Label lb_rooms;
         private System.Windows.Forms.Label lb_clients;
-        private System.Windows.Forms.Label lb_name;
+        public System.Windows.Forms.TextBox txt_password;
+        private System.Windows.Forms.Label ps_hint;
+        private System.Windows.Forms.Button btn_reg;
+        public System.Windows.Forms.Label lb_name;
     }
 }
 

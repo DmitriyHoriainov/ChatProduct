@@ -79,6 +79,7 @@
             this.Controls.Add(this.lb);
             this.Controls.Add(this.btn2);
             this.Controls.Add(this.btn1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Dialog";
             this.Text = "Dialog";
             this.ResumeLayout(false);

@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -29,6 +30,7 @@ namespace MyNewChatClient
                 request.command = "refresh";
                 request.data = "";
                 writer.WriteLine(JsonConvert.SerializeObject(request));
+                writer.Flush();
             }
             else
             {
@@ -36,8 +38,8 @@ namespace MyNewChatClient
                 request.command = "refreshclients";
                 request.data = "";
                 writer.WriteLine(JsonConvert.SerializeObject(request));
+                writer.Flush();
             }
-            writer.Flush();
-        }
+        }     
     }
 }

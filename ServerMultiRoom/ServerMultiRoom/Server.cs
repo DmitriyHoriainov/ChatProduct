@@ -72,10 +72,10 @@ namespace ServerMultiRoom
                 }
             }
         }
-        public void SetRoom(List<Client> clientsList, Rooms rms, int index)
+        public void SetRoom(int index)
         {
             string room = "";
-            foreach (var item in rms.roomList)
+            foreach (var item in rooms.roomList)
             {
                 if (item.privateroom && item.IsHere(clientsList.ElementAt(index)))
                     room += item.name + ".";
@@ -97,11 +97,11 @@ namespace ServerMultiRoom
                 if (rooms.roomList[z].IsPassive(clientsList.ElementAt(index)))
                 {
                     Thread.Sleep(100);
-                    rooms.roomList[z].SendForPassivOne(index);
+                    rooms.roomList[z].SendForPassivOne(index, clientsList.ElementAt(index));
                 }
             }
         }
-        public void SetClient(List<Client> clientsList, int index)
+        public void SetClient(int index)
         {
             string clients = "";
             foreach (var client in clientsList)

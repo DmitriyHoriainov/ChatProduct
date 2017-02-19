@@ -50,14 +50,14 @@ namespace MyNewChatClient
             
             lb.Text = "Do you want to ban " + name + " ?";
             btn1.Text = "Permanent";
-            btn2.Text = "For some time"; 
+            btn2.Text = "For time"; 
         }
         private void IniUnban()
         {
             lb.Text = "Do you want unban " + name + " ?";
             tb.Visible = false;
-            btn1.Text = "Cancel";
-            btn2.Text = "Unban";
+            btn1.Text = "Unbun";
+            btn2.Text = "Cancel";
         }
         private void IniCreateRoom()
         {
@@ -76,7 +76,10 @@ namespace MyNewChatClient
                     MessageBox.Show(name + "has been banned for permanent");
                     this.Close();
                     break;
-                case "unban":                  
+                case "unban":
+                    Unban unb = new Unban(name);
+                    unb.UnbanHandler(client.GetStream(), request);
+                    MessageBox.Show(name + " has been unbaned");
                     this.Close();
                     break;
                 case "createroom":
@@ -92,7 +95,7 @@ namespace MyNewChatClient
 
         private bool CheckName()
         {
-            Regex rgx = new Regex("^[а-яА-ЯёЁa-zA-Z0-9]+$");
+            Regex rgx = new Regex("^[a-zA-Z0-9]+$");
             if (tb.Text.Length == 0)
             {
                 MessageBox.Show("Please enter the room name");
@@ -105,7 +108,7 @@ namespace MyNewChatClient
             }
             else if (!rgx.IsMatch(tb.Text.ToString()))
             {
-                MessageBox.Show("Room name contains only letters and numbers");
+                MessageBox.Show("Room name contains only english letters and numbers");
                 return false;
             }
             return true;
@@ -127,9 +130,7 @@ namespace MyNewChatClient
                     }
                     break;
                 case "unban":
-                    Unban unb = new Unban( name);
-                    unb.UnbanHandler(client.GetStream(), request);
-                    MessageBox.Show(name + " has been unbaned");
+                    
                     this.Close();
                     break;
                 case "createroom":                   
@@ -145,20 +146,20 @@ namespace MyNewChatClient
                 if (Convert.ToInt32(tb.Text.ToString()) > 9999)
                 {
                     MessageBox.Show("Maximum ban time 9999");
-                    return true;
+                    return false;
                 }
-                if (Convert.ToInt32(tb.Text.ToString()) < 1)
+                if (Convert.ToInt32(tb.Text.ToString()) < 60)
                 {
                     MessageBox.Show("Minimum ban time 60");
-                    return true;
+                    return false;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Please enter only numbers");
-                return true;
+                return false;
             }
-            return false;
+            return true;
         }
     }
 }
