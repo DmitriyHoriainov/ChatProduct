@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using Newtonsoft.Json;
 using System;
+using System.Threading;
 
 namespace ServerMultiRoom
 {
@@ -35,7 +36,7 @@ namespace ServerMultiRoom
             }
             catch(Exception ex)
             {
-                Request req = new Request("wrongprivateroom", null, null);
+                Request req = new Request("enter", namecreator.name + "+" + nameinvited.name, "nomissed");
                 StreamWriter sq = new StreamWriter(namecreator.netStream);
                 sq.WriteLine(JsonConvert.SerializeObject(req));
                 sq.Flush();
@@ -70,7 +71,14 @@ namespace ServerMultiRoom
                     response = response.TrimEnd('.');
                     pasive.Remove(client);
                     activeList.Add(client);
-                    req = new Request("enter", room, "missed,"+ response);
+                    if(response == "")
+                    {
+                        req = new Request("enter", room, "nomissed," + response);
+                    }
+                    else
+                    {
+                        req = new Request("enter", room, "missed," + response);
+                    }
                     return JsonConvert.SerializeObject(req);
                 }
                 else
@@ -119,12 +127,27 @@ namespace ServerMultiRoom
                 for (int i = 0; i < pasive.Count; i++)
                 {
                     int a = pasive[pasive.Keys.ElementAt(i)];
-                    Request req = new Request("pofig",name,(str.Length - a).ToString());
+                    Request req = new Request("pofig",name,(str.Length - a).ToString(), privateroom.ToString());
 
                     StreamWriter writer = new StreamWriter(pasive.Keys.ElementAt(i).netStream);
                     writer.WriteLine(JsonConvert.SerializeObject(req));
                     writer.Flush();
                 }
+            }
+        }
+
+        public void SendForPassivOne(int index)
+        {
+            if (File.Exists(("logs/" + name + ".txt")))
+            {
+                string[] str = File.ReadAllLines("logs/" + name + ".txt");
+
+                int a = pasive[pasive.Keys.ElementAt(index)];
+                Request req = new Request("pofig", name, (str.Length - a).ToString(), privateroom.ToString());
+
+                StreamWriter writer = new StreamWriter(pasive.Keys.ElementAt(index).netStream);
+                writer.WriteLine(JsonConvert.SerializeObject(req));
+                writer.Flush();
             }
         }
 

@@ -120,9 +120,9 @@ namespace MyNewChatClient
                         case "wrongroom":
                             MessageBox.Show("Error, room " + req.data + " has already been created.");
                             break;
-                        case "wrongprivateroom":
-                            MessageBox.Show("Error, privateroom " + req.data + " has already been created.");
-                            break;
+                        //case "wrongprivateroom":
+                        //    MessageBox.Show("Error, privateroom " + req.data + " has already been created.");
+                        //    break;
                         case "pofig":
                             int a = -1;
                             for (int i = 0; i < form1.lst_rooms.Items.Count; i++)
@@ -134,9 +134,9 @@ namespace MyNewChatClient
                             if (a != -1)
                             {
                                 form1.lst_rooms.Items.RemoveAt(a);
-                                if (req.data == "0")
+                                if (req.data == "0" && req.time != "True")
                                     form1.lst_rooms.Items.Insert(a, req.command + "  ");
-                                else
+                                else if(req.data != "0")
                                     form1.lst_rooms.Items.Insert(a, req.command + "   +" + req.data);
                             }
                             else

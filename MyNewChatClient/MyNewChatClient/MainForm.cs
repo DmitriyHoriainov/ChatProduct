@@ -48,7 +48,7 @@ namespace MyNewChatClient
             {
                 MessageBox.Show("User is not choosen. Please, chose the user first.");
             }
-            refresh.RefreshHendler(client.GetStream(), "Rooms", request);
+           // refresh.RefreshHendler(client.GetStream(), "Rooms", request);
         }
         private void btn_login_Click(object sender, EventArgs e)
         {

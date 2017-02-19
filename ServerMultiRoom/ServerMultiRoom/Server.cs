@@ -43,25 +43,32 @@ namespace ServerMultiRoom
         {
             while (true)
             {
-                for (int i = 0; i < clientsList.Count; i++)
+                try
                 {
-                    if (clientsList[i].netStream.DataAvailable)
+                    for (int i = 0; i < clientsList.Count; i++)
                     {
-                        string message = clientsList[i].Read();
-                        Request req = JsonConvert.DeserializeObject<Request>(message);
-                        switch (req.modul)
+                        if (clientsList[i].netStream.DataAvailable)
                         {
-                            case "rooms":
-                                rooms.SetCommand(req, i);                                                         
-                                break;
-                            case "lobby":
-                                lobbys.SetCommand(req, i);
-                                break;
-                            case "auth":
-                                auth.SetCommand(req, i);
-                                break;                           
+                            string message = clientsList[i].Read();
+                            Request req = JsonConvert.DeserializeObject<Request>(message);
+                            switch (req.modul)
+                            {
+                                case "rooms":
+                                    rooms.SetCommand(req, i);
+                                    break;
+                                case "lobby":
+                                    lobbys.SetCommand(req, i);
+                                    break;
+                                case "auth":
+                                    auth.SetCommand(req, i);
+                                    break;
+                            }
                         }
                     }
+                }
+                catch(Exception ex)
+                {
+
                 }
             }
         }
@@ -90,7 +97,7 @@ namespace ServerMultiRoom
                 if (rooms.roomList[z].IsPassive(clientsList.ElementAt(index)))
                 {
                     Thread.Sleep(100);
-                    rooms.roomList[z].SendForPassiv();
+                    rooms.roomList[z].SendForPassivOne(index);
                 }
             }
         }

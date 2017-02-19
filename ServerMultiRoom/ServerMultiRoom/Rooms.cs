@@ -96,9 +96,18 @@ namespace ServerMultiRoom
                     }
                     break;
                 case "privateroom":
-                    roomList.Add(new Room(srv.clientsList.ElementAt(index).name + "+" + req.data));
-                    roomList.Last().privateroom = true;
-                    roomList.Find(c => c.name == srv.clientsList.ElementAt(index).name + "+" + req.data).CreatePrivate(srv.clientsList.ElementAt(index), srv.clientsList.Find(c => c.name == req.data));
+                    if (!File.Exists("logs/" + srv.clientsList.ElementAt(index).name + "+" + req.data + ".txt"))
+                    {
+                        roomList.Add(new Room(srv.clientsList.ElementAt(index).name + "+" + req.data));
+                        roomList.Last().privateroom = true;
+                        roomList.Find(c => c.name == srv.clientsList.ElementAt(index).name + "+" + req.data).CreatePrivate(srv.clientsList.ElementAt(index), srv.clientsList.Find(c => c.name == req.data));
+                    }
+                    else
+                    {
+                        writer = new StreamWriter(srv.clientsList.ElementAt(index).netStream);
+                        writer.WriteLine(roomList.Find(c => c.name == srv.clientsList.ElementAt(index).name + "+" + req.data).Add(srv.clientsList.ElementAt(index), srv.clientsList.ElementAt(index).name + "+" + req.data));
+                        writer.Flush();
+                    }
                     break;
             }
         }
