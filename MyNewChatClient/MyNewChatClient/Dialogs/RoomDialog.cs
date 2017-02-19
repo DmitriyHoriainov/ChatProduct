@@ -54,16 +54,15 @@ namespace MyNewChatClient
                     int j = 0;
                     try
                     {
-                        //while (j <= rtb_message.Text.Length - str11.Length)
-                        //{
-                            //выделение цветом
+                        while (j < rtb_message.Text.Length - str11.Length)
+                        {
                             j = rtb_message.Text.IndexOf(str11, j);
-                            if (j < 0) break;
+                            if (j <= 0) break;
                             rtb_message.SelectionStart = j;
                             rtb_message.SelectionLength = str11.Length;
                             rtb_message.SelectionColor = Color.Black;
                             j += str11.Length;
-                        //}
+                        }
                     }
                     catch (Exception ex)
                     {

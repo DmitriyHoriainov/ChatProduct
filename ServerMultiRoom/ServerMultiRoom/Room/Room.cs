@@ -64,7 +64,7 @@ namespace ServerMultiRoom
                 {
                     string[] str = File.ReadAllLines(("logs/" + name + ".txt"));
                     string response = "";
-                    for (int i = count; i < str.Length; i++)
+                    for (int i = 0; i < str.Length; i++)
                     {
                         response += str[i] + ".";
                     }
@@ -73,11 +73,11 @@ namespace ServerMultiRoom
                     activeList.Add(client);
                     if(response == "")
                     {
-                        req = new Request("enter", room, "nomissed," + response);
+                        req = new Request("enter", room, "nomissed," + response, count.ToString());
                     }
                     else
                     {
-                        req = new Request("enter", room, "missed," + response);
+                        req = new Request("enter", room, "missed," + response, count.ToString());
                     }
                     return JsonConvert.SerializeObject(req);
                 }
@@ -142,6 +142,10 @@ namespace ServerMultiRoom
             {
                 string[] str = File.ReadAllLines("logs/" + name + ".txt");
 
+                if(index == pasive.Count)
+                {
+                    index = index - 1;
+                }
                 int a = pasive[pasive.Keys.ElementAt(index)];
                 Request req = new Request("pofig", name, (str.Length - a).ToString(), privateroom.ToString());
 

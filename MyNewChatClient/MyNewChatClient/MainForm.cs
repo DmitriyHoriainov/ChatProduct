@@ -83,6 +83,7 @@ namespace MyNewChatClient
                     lb_hint.Visible = false;
 
                     refresh.RefreshHendler(client.GetStream(), "Rooms", request);
+                    Thread.Sleep(100);
                     refresh.RefreshHendler(client.GetStream(), "clients", request);
                 }
             }

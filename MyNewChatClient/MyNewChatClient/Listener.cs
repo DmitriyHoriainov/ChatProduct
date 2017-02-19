@@ -73,17 +73,20 @@ namespace MyNewChatClient
                             Thread.Sleep(100);
                             if (str.Length > 1)
                             {
-                                string[] tmp = str[1].Split('.');
-                                for (int i = 0; i < tmp.Length; i++)
+                                string[] tmp = rd.rtb_message.Text.Split('\n');
+                                for (int i = Convert.ToInt32(req.time); i < tmp.Length; i++)
                                 {
                                     string str11 = tmp[i];
                                     int j = 0;
-                                    j = rd.rtb_message.Text.IndexOf(str11, j);
-                                    if (j < 0) break;
-                                    rd.rtb_message.SelectionStart = j;
-                                    rd.rtb_message.SelectionLength = str11.Length;
-                                    rd.rtb_message.SelectionColor = Color.Red;
-                                    j += str11.Length;
+                                    while (j < rd.rtb_message.Text.Length - str11.Length)
+                                    {
+                                        j = rd.rtb_message.Text.IndexOf(str11, j);
+                                        if (j <= 0) break;
+                                        rd.rtb_message.SelectionStart = j;
+                                        rd.rtb_message.SelectionLength = str11.Length;
+                                        rd.rtb_message.SelectionColor = Color.Red;
+                                        j += str11.Length;
+                                    }
 
                                 }
                             }
