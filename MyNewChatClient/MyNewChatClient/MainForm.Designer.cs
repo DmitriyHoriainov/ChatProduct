@@ -48,7 +48,7 @@
             // 
             // btn_login
             // 
-            this.btn_login.Location = new System.Drawing.Point(162, 25);
+            this.btn_login.Location = new System.Drawing.Point(211, 25);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(122, 23);
             this.btn_login.TabIndex = 0;
@@ -58,7 +58,7 @@
             // 
             // btn_logout
             // 
-            this.btn_logout.Location = new System.Drawing.Point(162, 25);
+            this.btn_logout.Location = new System.Drawing.Point(212, 26);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(122, 23);
             this.btn_logout.TabIndex = 1;
@@ -78,15 +78,14 @@
             // 
             this.lst_rooms.FormattingEnabled = true;
             this.lst_rooms.Location = new System.Drawing.Point(12, 78);
-            this.lst_rooms.MultiColumn = true;
             this.lst_rooms.Name = "lst_rooms";
-            this.lst_rooms.Size = new System.Drawing.Size(135, 238);
+            this.lst_rooms.Size = new System.Drawing.Size(184, 238);
             this.lst_rooms.TabIndex = 3;
             this.lst_rooms.Visible = false;
             // 
             // btn_refresh_rooms
             // 
-            this.btn_refresh_rooms.Location = new System.Drawing.Point(12, 380);
+            this.btn_refresh_rooms.Location = new System.Drawing.Point(37, 380);
             this.btn_refresh_rooms.Name = "btn_refresh_rooms";
             this.btn_refresh_rooms.Size = new System.Drawing.Size(135, 23);
             this.btn_refresh_rooms.TabIndex = 4;
@@ -97,7 +96,7 @@
             // 
             // btn_create_room
             // 
-            this.btn_create_room.Location = new System.Drawing.Point(12, 322);
+            this.btn_create_room.Location = new System.Drawing.Point(37, 322);
             this.btn_create_room.Name = "btn_create_room";
             this.btn_create_room.Size = new System.Drawing.Size(135, 23);
             this.btn_create_room.TabIndex = 5;
@@ -108,7 +107,7 @@
             // 
             // btn_room_enter
             // 
-            this.btn_room_enter.Location = new System.Drawing.Point(12, 351);
+            this.btn_room_enter.Location = new System.Drawing.Point(37, 351);
             this.btn_room_enter.Name = "btn_room_enter";
             this.btn_room_enter.Size = new System.Drawing.Size(135, 23);
             this.btn_room_enter.TabIndex = 6;
@@ -120,7 +119,7 @@
             // lst_clients
             // 
             this.lst_clients.FormattingEnabled = true;
-            this.lst_clients.Location = new System.Drawing.Point(161, 78);
+            this.lst_clients.Location = new System.Drawing.Point(213, 78);
             this.lst_clients.Name = "lst_clients";
             this.lst_clients.Size = new System.Drawing.Size(120, 238);
             this.lst_clients.TabIndex = 7;
@@ -128,7 +127,7 @@
             // 
             // btn_private
             // 
-            this.btn_private.Location = new System.Drawing.Point(162, 338);
+            this.btn_private.Location = new System.Drawing.Point(211, 336);
             this.btn_private.Name = "btn_private";
             this.btn_private.Size = new System.Drawing.Size(121, 23);
             this.btn_private.TabIndex = 8;
@@ -139,7 +138,7 @@
             // 
             // btn_refresh_clients
             // 
-            this.btn_refresh_clients.Location = new System.Drawing.Point(161, 380);
+            this.btn_refresh_clients.Location = new System.Drawing.Point(213, 380);
             this.btn_refresh_clients.Name = "btn_refresh_clients";
             this.btn_refresh_clients.Size = new System.Drawing.Size(120, 23);
             this.btn_refresh_clients.TabIndex = 9;
@@ -150,7 +149,7 @@
             // 
             // btn_ban
             // 
-            this.btn_ban.Location = new System.Drawing.Point(161, 419);
+            this.btn_ban.Location = new System.Drawing.Point(212, 419);
             this.btn_ban.Name = "btn_ban";
             this.btn_ban.Size = new System.Drawing.Size(120, 23);
             this.btn_ban.TabIndex = 10;
@@ -161,7 +160,7 @@
             // 
             // btn_unban
             // 
-            this.btn_unban.Location = new System.Drawing.Point(162, 448);
+            this.btn_unban.Location = new System.Drawing.Point(213, 448);
             this.btn_unban.Name = "btn_unban";
             this.btn_unban.Size = new System.Drawing.Size(119, 23);
             this.btn_unban.TabIndex = 11;
@@ -192,7 +191,7 @@
             // lb_clients
             // 
             this.lb_clients.AutoSize = true;
-            this.lb_clients.Location = new System.Drawing.Point(158, 62);
+            this.lb_clients.Location = new System.Drawing.Point(210, 62);
             this.lb_clients.Name = "lb_clients";
             this.lb_clients.Size = new System.Drawing.Size(34, 13);
             this.lb_clients.TabIndex = 15;
@@ -213,7 +212,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(296, 483);
+            this.ClientSize = new System.Drawing.Size(341, 483);
             this.Controls.Add(this.lb_name);
             this.Controls.Add(this.lb_clients);
             this.Controls.Add(this.lb_rooms);

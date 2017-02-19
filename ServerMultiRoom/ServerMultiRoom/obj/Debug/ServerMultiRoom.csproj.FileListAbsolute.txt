@@ -37,3 +37,11 @@ C:\Users\nikit\Desktop\Чат\ServerMultiRoom\ServerMultiRoom\bin\Debug\Newtonso
 C:\Users\nikit\Desktop\Чат\ServerMultiRoom\ServerMultiRoom\bin\Debug\Newtonsoft.Json.xml
 E:\RoomsChat\ServerMultiRoom\ServerMultiRoom\bin\Debug\Newtonsoft.Json.dll
 E:\RoomsChat\ServerMultiRoom\ServerMultiRoom\bin\Debug\Newtonsoft.Json.xml
+E:\GithubChat\ChatProduct\ServerMultiRoom\ServerMultiRoom\bin\Debug\ServerMultiRoom.exe.config
+E:\GithubChat\ChatProduct\ServerMultiRoom\ServerMultiRoom\obj\Debug\ServerMultiRoom.exe
+E:\GithubChat\ChatProduct\ServerMultiRoom\ServerMultiRoom\obj\Debug\ServerMultiRoom.pdb
+E:\GithubChat\ChatProduct\ServerMultiRoom\ServerMultiRoom\bin\Debug\ServerMultiRoom.exe
+E:\GithubChat\ChatProduct\ServerMultiRoom\ServerMultiRoom\bin\Debug\ServerMultiRoom.pdb
+E:\GithubChat\ChatProduct\ServerMultiRoom\ServerMultiRoom\bin\Debug\Newtonsoft.Json.dll
+E:\GithubChat\ChatProduct\ServerMultiRoom\ServerMultiRoom\bin\Debug\Newtonsoft.Json.xml
+E:\GithubChat\ChatProduct\ServerMultiRoom\ServerMultiRoom\obj\Debug\ServerMultiRoom.csprojResolveAssemblyReference.cache

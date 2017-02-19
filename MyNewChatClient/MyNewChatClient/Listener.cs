@@ -78,15 +78,13 @@ namespace MyNewChatClient
                                 {
                                     string str11 = tmp[i];
                                     int j = 0;
-                                    while (j <= rd.rtb_message.Text.Length - str11.Length)
-                                    {
-                                        j = rd.rtb_message.Text.IndexOf(str11, j);
-                                        if (j < 0) break;
-                                        rd.rtb_message.SelectionStart = j;
-                                        rd.rtb_message.SelectionLength = str11.Length;
-                                        rd.rtb_message.SelectionColor = Color.Red;
-                                        j += str11.Length;
-                                    }
+                                    j = rd.rtb_message.Text.IndexOf(str11, j);
+                                    if (j < 0) break;
+                                    rd.rtb_message.SelectionStart = j;
+                                    rd.rtb_message.SelectionLength = str11.Length;
+                                    rd.rtb_message.SelectionColor = Color.Red;
+                                    j += str11.Length;
+
                                 }
                             }
                             break;

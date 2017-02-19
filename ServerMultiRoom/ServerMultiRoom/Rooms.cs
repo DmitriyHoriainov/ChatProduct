@@ -65,6 +65,16 @@ namespace ServerMultiRoom
                     writer.WriteLine(responce);
                     writer.Flush();
                     break;
+                case "exit":
+                    roomList.Find(c => c.name == req.data).Exit(srv.clientsList.ElementAt(index));
+
+                    Request request1 = new Request("leave", null, null);
+                    string responce1 = JsonConvert.SerializeObject(request1);
+
+                    writer = new StreamWriter(srv.clientsList.ElementAt(index).netStream);
+                    writer.WriteLine(responce1);
+                    writer.Flush();
+                    break;
                 case "enter":
                     writer = new StreamWriter(srv.clientsList.ElementAt(index).netStream);
                     writer.WriteLine(roomList.Find(c => c.name == req.data).Add(srv.clientsList.ElementAt(index), req.data));
@@ -86,9 +96,9 @@ namespace ServerMultiRoom
                     }
                     break;
                 case "privateroom":
-                    roomList.Add(new Room("Privat(" + srv.clientsList.ElementAt(index).name + ")"));
+                    roomList.Add(new Room(srv.clientsList.ElementAt(index).name + "+" + req.data));
                     roomList.Last().privateroom = true;
-                    roomList.Find(c => c.name == "Privat(" + srv.clientsList.ElementAt(index).name + ")").CreatePrivate(srv.clientsList.ElementAt(index), srv.clientsList.Find(c => c.name == req.data));
+                    roomList.Find(c => c.name == srv.clientsList.ElementAt(index).name + "+" + req.data).CreatePrivate(srv.clientsList.ElementAt(index), srv.clientsList.Find(c => c.name == req.data));
                     break;
             }
         }

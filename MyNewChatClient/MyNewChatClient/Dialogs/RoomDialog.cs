@@ -42,10 +42,6 @@ namespace MyNewChatClient
             room.LeaveHendler(sender, request);
         }
 
-        private void RoomDialog_MouseMove(object sender, MouseEventArgs e)
-        {
-            
-        }
 
         private void MissedMessages()
         {
@@ -77,20 +73,16 @@ namespace MyNewChatClient
             }
         }
 
-        private void RoomDialog_MouseClick(object sender, MouseEventArgs e)
-        {
-            
-        }
-
-
         private void txt_msg_MouseClick(object sender, MouseEventArgs e)
         {
             MissedMessages();
         }
 
-        private void rtb_message_MouseClick(object sender, MouseEventArgs e)
+        private void btn_exit_Click(object sender, EventArgs e)
         {
-            
+            room.ExitHendler(sender, request);
+            Thread.Sleep(100);
+            room.SendHendler("User left the room", request);
         }
     }
 }

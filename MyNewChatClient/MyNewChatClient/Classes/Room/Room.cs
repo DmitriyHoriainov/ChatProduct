@@ -40,5 +40,15 @@ namespace MyNewChatClient
             writer.WriteLine(JsonConvert.SerializeObject(request));
             writer.Flush();
         }
+
+        public void ExitHendler(object sender, Request request)
+        {
+            request.modul = "rooms";
+            request.command = "exit";
+            request.data = name;
+            StreamWriter writer = new StreamWriter(connection.GetStream());
+            writer.WriteLine(JsonConvert.SerializeObject(request));
+            writer.Flush();
+        }
     }
 }

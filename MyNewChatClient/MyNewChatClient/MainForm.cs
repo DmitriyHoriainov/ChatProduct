@@ -100,9 +100,9 @@ namespace MyNewChatClient
                 MessageBox.Show("Please enter the username");
                 return false;
             }
-            else if (txt_name.Text.Length > 15)
+            else if (txt_name.Text.Length > 10)
             {
-                MessageBox.Show("Very long username! Enter username till 15 symbols.");
+                MessageBox.Show("Very long username! Enter username till 10 symbols.");
                 return false;
             }
             else if (!rgx.IsMatch(txt_name.Text.ToString()))

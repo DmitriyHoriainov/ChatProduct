@@ -32,6 +32,7 @@
             this.btn_send = new System.Windows.Forms.Button();
             this.txt_msg = new System.Windows.Forms.TextBox();
             this.rtb_message = new System.Windows.Forms.RichTextBox();
+            this.btn_exit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_back
@@ -41,7 +42,7 @@
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(75, 23);
             this.btn_back.TabIndex = 0;
-            this.btn_back.Text = "Go back";
+            this.btn_back.Text = "Close";
             this.btn_back.UseVisualStyleBackColor = true;
             this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
@@ -69,8 +70,17 @@
             this.rtb_message.Name = "rtb_message";
             this.rtb_message.Size = new System.Drawing.Size(475, 295);
             this.rtb_message.TabIndex = 4;
-            this.rtb_message.Text = "";
-            this.rtb_message.MouseClick += new System.Windows.Forms.MouseEventHandler(this.rtb_message_MouseClick);
+            this.rtb_message.Text = "";          
+            // 
+            // btn_exit
+            // 
+            this.btn_exit.Location = new System.Drawing.Point(493, 41);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(75, 23);
+            this.btn_exit.TabIndex = 5;
+            this.btn_exit.Text = "Exit room";
+            this.btn_exit.UseVisualStyleBackColor = true;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // RoomDialog
             // 
@@ -79,6 +89,7 @@
             this.CancelButton = this.btn_back;
             this.ClientSize = new System.Drawing.Size(574, 350);
             this.ControlBox = false;
+            this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.rtb_message);
             this.Controls.Add(this.txt_msg);
             this.Controls.Add(this.btn_send);
@@ -88,8 +99,6 @@
             this.MinimizeBox = false;
             this.Name = "RoomDialog";
             this.Text = "chat";
-            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RoomDialog_MouseClick);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RoomDialog_MouseMove);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,5 +110,6 @@
         private System.Windows.Forms.Button btn_send;
         private System.Windows.Forms.TextBox txt_msg;
         public System.Windows.Forms.RichTextBox rtb_message;
+        private System.Windows.Forms.Button btn_exit;
     }
 }

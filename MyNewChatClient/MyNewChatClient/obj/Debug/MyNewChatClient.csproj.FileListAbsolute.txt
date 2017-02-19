@@ -83,3 +83,16 @@ C:\Users\nikit\Desktop\Чат\MyNewChatClient\MyNewChatClient\bin\Debug\Newtonso
 C:\Users\nikit\Desktop\Чат\MyNewChatClient\MyNewChatClient\bin\Debug\Newtonsoft.Json.xml
 E:\RoomsChat\MyNewChatClient\MyNewChatClient\bin\Debug\Newtonsoft.Json.dll
 E:\RoomsChat\MyNewChatClient\MyNewChatClient\bin\Debug\Newtonsoft.Json.xml
+E:\GithubChat\ChatProduct\MyNewChatClient\MyNewChatClient\bin\Debug\MyNewChatClient.exe.config
+E:\GithubChat\ChatProduct\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.exe
+E:\GithubChat\ChatProduct\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.pdb
+E:\GithubChat\ChatProduct\MyNewChatClient\MyNewChatClient\bin\Debug\MyNewChatClient.exe
+E:\GithubChat\ChatProduct\MyNewChatClient\MyNewChatClient\bin\Debug\MyNewChatClient.pdb
+E:\GithubChat\ChatProduct\MyNewChatClient\MyNewChatClient\bin\Debug\Newtonsoft.Json.dll
+E:\GithubChat\ChatProduct\MyNewChatClient\MyNewChatClient\bin\Debug\Newtonsoft.Json.xml
+E:\GithubChat\ChatProduct\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.csprojResolveAssemblyReference.cache
+E:\GithubChat\ChatProduct\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.Dialog.resources
+E:\GithubChat\ChatProduct\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.RoomDialog.resources
+E:\GithubChat\ChatProduct\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.MainForm.resources
+E:\GithubChat\ChatProduct\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.Properties.Resources.resources
+E:\GithubChat\ChatProduct\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.csproj.GenerateResource.Cache

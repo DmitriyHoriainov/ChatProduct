@@ -28,7 +28,7 @@ namespace ServerMultiRoom
             {
                 activeList.Add(namecreator);
                 pasive.Add(nameinvited, 0);
-                Request req = new Request("enter", "Privat(" + namecreator.name + ")", "nomissed");
+                Request req = new Request("enter", namecreator.name + "+" + nameinvited.name, "nomissed");
                 StreamWriter sq = new StreamWriter(namecreator.netStream);
                 sq.WriteLine(JsonConvert.SerializeObject(req));
                 sq.Flush();
@@ -96,6 +96,8 @@ namespace ServerMultiRoom
                 pasive.Add(client, 0);
             }
         }
+
+
         public void BroadCast(string name, string message)
         {
             Log(name + ":" + message);
