@@ -1,0 +1,85 @@
+C:\Users\Sony\Desktop\Клиент-серверка\MyNewChatClient\MyNewChatClient\bin\Debug\MyNewChatClient.exe.config
+C:\Users\Sony\Desktop\Клиент-серверка\MyNewChatClient\MyNewChatClient\bin\Debug\MyNewChatClient.exe
+C:\Users\Sony\Desktop\Клиент-серверка\MyNewChatClient\MyNewChatClient\bin\Debug\MyNewChatClient.pdb
+C:\Users\Sony\Desktop\Клиент-серверка\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.Form1.resources
+C:\Users\Sony\Desktop\Клиент-серверка\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.Properties.Resources.resources
+C:\Users\Sony\Desktop\Клиент-серверка\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.csproj.GenerateResource.Cache
+C:\Users\Sony\Desktop\Клиент-серверка\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.exe
+C:\Users\Sony\Desktop\Клиент-серверка\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.pdb
+C:\Users\Sony\Desktop\Клиент-серверка\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.CreateRoomDialog.resources
+C:\Users\Sony\Desktop\Клиент-серверка\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.RoomDialog.resources
+C:\Users\nikit\Desktop\MyNewChatClient\MyNewChatClient\bin\Debug\MyNewChatClient.exe.config
+C:\Users\nikit\Desktop\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.exe
+C:\Users\nikit\Desktop\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.pdb
+C:\Users\nikit\Desktop\MyNewChatClient\MyNewChatClient\bin\Debug\MyNewChatClient.exe
+C:\Users\nikit\Desktop\MyNewChatClient\MyNewChatClient\bin\Debug\MyNewChatClient.pdb
+C:\Users\nikit\Desktop\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.csprojResolveAssemblyReference.cache
+C:\Users\nikit\Desktop\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.RoomDialog.resources
+C:\Users\nikit\Desktop\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.CreateRoomDialog.resources
+C:\Users\nikit\Desktop\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.Form1.resources
+C:\Users\nikit\Desktop\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.Properties.Resources.resources
+C:\Users\nikit\Desktop\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.csproj.GenerateResource.Cache
+E:\RoomsChat\MyNewChatClient\MyNewChatClient\bin\Debug\MyNewChatClient.exe.config
+E:\RoomsChat\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.exe
+E:\RoomsChat\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.pdb
+E:\RoomsChat\MyNewChatClient\MyNewChatClient\bin\Debug\MyNewChatClient.exe
+E:\RoomsChat\MyNewChatClient\MyNewChatClient\bin\Debug\MyNewChatClient.pdb
+E:\RoomsChat\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.csprojResolveAssemblyReference.cache
+E:\RoomsChat\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.RoomDialog.resources
+E:\RoomsChat\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.Properties.Resources.resources
+E:\RoomsChat\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.csproj.GenerateResource.Cache
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\multichat\MyNewChatClient\MyNewChatClient\bin\Debug\MyNewChatClient.exe.config
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\multichat\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.exe
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\multichat\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.pdb
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\multichat\MyNewChatClient\MyNewChatClient\bin\Debug\MyNewChatClient.exe
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\multichat\MyNewChatClient\MyNewChatClient\bin\Debug\MyNewChatClient.pdb
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\multichat\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.csprojResolveAssemblyReference.cache
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\multichat\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.RoomDialog.resources
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\multichat\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.CreateRoomDialog.resources
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\multichat\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.Form1.resources
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\multichat\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.Properties.Resources.resources
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\multichat\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.csproj.GenerateResource.Cache
+C:\Users\Sony\Desktop\Клиент-серверка\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.BanDialog.resources
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\multichat\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.BanDialog.resources
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\multichat\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.Unban_dialog.resources
+E:\RoomsChat\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.MainForm.resources
+K:\08022017\MyNewChatClient\MyNewChatClient\bin\Debug\MyNewChatClient.exe.config
+K:\08022017\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.exe
+K:\08022017\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.pdb
+K:\08022017\MyNewChatClient\MyNewChatClient\bin\Debug\MyNewChatClient.exe
+K:\08022017\MyNewChatClient\MyNewChatClient\bin\Debug\MyNewChatClient.pdb
+K:\08022017\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.csprojResolveAssemblyReference.cache
+K:\08022017\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.BanDialog.resources
+K:\08022017\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.RoomDialog.resources
+K:\08022017\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.CreateRoomDialog.resources
+K:\08022017\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.MainForm.resources
+K:\08022017\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.Properties.Resources.resources
+K:\08022017\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.Unban_dialog.resources
+K:\08022017\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.csproj.GenerateResource.Cache
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\Chat09.02\MyNewChatClient\MyNewChatClient\bin\Debug\MyNewChatClient.exe.config
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\Chat09.02\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.exe
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\Chat09.02\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.pdb
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\Chat09.02\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.csprojResolveAssemblyReference.cache
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\Chat09.02\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.Dialog.resources
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\Chat09.02\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.RoomDialog.resources
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\Chat09.02\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.MainForm.resources
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\Chat09.02\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.Properties.Resources.resources
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\Chat09.02\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.csproj.GenerateResource.Cache
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\Chat09.02\MyNewChatClient\MyNewChatClient\bin\Debug\MyNewChatClient.exe
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\Chat09.02\MyNewChatClient\MyNewChatClient\bin\Debug\MyNewChatClient.pdb
+E:\RoomsChat\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.Dialog.resources
+C:\Users\nikit\Desktop\Чат\MyNewChatClient\MyNewChatClient\bin\Debug\MyNewChatClient.exe.config
+C:\Users\nikit\Desktop\Чат\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.exe
+C:\Users\nikit\Desktop\Чат\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.pdb
+C:\Users\nikit\Desktop\Чат\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.csprojResolveAssemblyReference.cache
+C:\Users\nikit\Desktop\Чат\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.Dialog.resources
+C:\Users\nikit\Desktop\Чат\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.RoomDialog.resources
+C:\Users\nikit\Desktop\Чат\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.MainForm.resources
+C:\Users\nikit\Desktop\Чат\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.Properties.Resources.resources
+C:\Users\nikit\Desktop\Чат\MyNewChatClient\MyNewChatClient\obj\Debug\MyNewChatClient.csproj.GenerateResource.Cache
+C:\Users\nikit\Desktop\Чат\MyNewChatClient\MyNewChatClient\bin\Debug\MyNewChatClient.exe
+C:\Users\nikit\Desktop\Чат\MyNewChatClient\MyNewChatClient\bin\Debug\MyNewChatClient.pdb
+C:\Users\nikit\Desktop\Чат\MyNewChatClient\MyNewChatClient\bin\Debug\Newtonsoft.Json.dll
+C:\Users\nikit\Desktop\Чат\MyNewChatClient\MyNewChatClient\bin\Debug\Newtonsoft.Json.xml
+E:\RoomsChat\MyNewChatClient\MyNewChatClient\bin\Debug\Newtonsoft.Json.dll
+E:\RoomsChat\MyNewChatClient\MyNewChatClient\bin\Debug\Newtonsoft.Json.xml

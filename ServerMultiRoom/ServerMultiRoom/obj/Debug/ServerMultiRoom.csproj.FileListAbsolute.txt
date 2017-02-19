@@ -1,0 +1,39 @@
+c:\users\nikit\onedrive\документы\visual studio 2015\Projects\ServerMultiRoom\ServerMultiRoom\bin\Debug\ServerMultiRoom.exe.config
+c:\users\nikit\onedrive\документы\visual studio 2015\Projects\ServerMultiRoom\ServerMultiRoom\bin\Debug\ServerMultiRoom.exe
+c:\users\nikit\onedrive\документы\visual studio 2015\Projects\ServerMultiRoom\ServerMultiRoom\bin\Debug\ServerMultiRoom.pdb
+c:\users\nikit\onedrive\документы\visual studio 2015\Projects\ServerMultiRoom\ServerMultiRoom\obj\Debug\ServerMultiRoom.csprojResolveAssemblyReference.cache
+c:\users\nikit\onedrive\документы\visual studio 2015\Projects\ServerMultiRoom\ServerMultiRoom\obj\Debug\ServerMultiRoom.exe
+c:\users\nikit\onedrive\документы\visual studio 2015\Projects\ServerMultiRoom\ServerMultiRoom\obj\Debug\ServerMultiRoom.pdb
+E:\RoomsChat\ServerMultiRoom\ServerMultiRoom\bin\Debug\ServerMultiRoom.exe.config
+E:\RoomsChat\ServerMultiRoom\ServerMultiRoom\obj\Debug\ServerMultiRoom.exe
+E:\RoomsChat\ServerMultiRoom\ServerMultiRoom\obj\Debug\ServerMultiRoom.pdb
+E:\RoomsChat\ServerMultiRoom\ServerMultiRoom\bin\Debug\ServerMultiRoom.exe
+E:\RoomsChat\ServerMultiRoom\ServerMultiRoom\bin\Debug\ServerMultiRoom.pdb
+E:\RoomsChat\ServerMultiRoom\ServerMultiRoom\obj\Debug\ServerMultiRoom.csprojResolveAssemblyReference.cache
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\multichat\ServerMultiRoom\ServerMultiRoom\bin\Debug\ServerMultiRoom.exe.config
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\multichat\ServerMultiRoom\ServerMultiRoom\obj\Debug\ServerMultiRoom.exe
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\multichat\ServerMultiRoom\ServerMultiRoom\obj\Debug\ServerMultiRoom.pdb
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\multichat\ServerMultiRoom\ServerMultiRoom\bin\Debug\ServerMultiRoom.exe
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\multichat\ServerMultiRoom\ServerMultiRoom\bin\Debug\ServerMultiRoom.pdb
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\multichat\ServerMultiRoom\ServerMultiRoom\obj\Debug\ServerMultiRoom.csprojResolveAssemblyReference.cache
+K:\08022017\ServerMultiRoom\ServerMultiRoom\bin\Debug\ServerMultiRoom.exe.config
+K:\08022017\ServerMultiRoom\ServerMultiRoom\obj\Debug\ServerMultiRoom.exe
+K:\08022017\ServerMultiRoom\ServerMultiRoom\obj\Debug\ServerMultiRoom.pdb
+K:\08022017\ServerMultiRoom\ServerMultiRoom\bin\Debug\ServerMultiRoom.exe
+K:\08022017\ServerMultiRoom\ServerMultiRoom\bin\Debug\ServerMultiRoom.pdb
+K:\08022017\ServerMultiRoom\ServerMultiRoom\obj\Debug\ServerMultiRoom.csprojResolveAssemblyReference.cache
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\Chat09.02\ServerMultiRoom\ServerMultiRoom\bin\Debug\ServerMultiRoom.exe.config
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\Chat09.02\ServerMultiRoom\ServerMultiRoom\obj\Debug\ServerMultiRoom.exe
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\Chat09.02\ServerMultiRoom\ServerMultiRoom\obj\Debug\ServerMultiRoom.pdb
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\Chat09.02\ServerMultiRoom\ServerMultiRoom\obj\Debug\ServerMultiRoom.csprojResolveAssemblyReference.cache
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\Chat09.02\ServerMultiRoom\ServerMultiRoom\bin\Debug\ServerMultiRoom.exe
+C:\Users\Dmitriy\Documents\Visual Studio 2015\Projects\Chat09.02\ServerMultiRoom\ServerMultiRoom\bin\Debug\ServerMultiRoom.pdb
+C:\Users\nikit\Desktop\Чат\ServerMultiRoom\ServerMultiRoom\bin\Debug\ServerMultiRoom.exe.config
+C:\Users\nikit\Desktop\Чат\ServerMultiRoom\ServerMultiRoom\obj\Debug\ServerMultiRoom.exe
+C:\Users\nikit\Desktop\Чат\ServerMultiRoom\ServerMultiRoom\obj\Debug\ServerMultiRoom.pdb
+C:\Users\nikit\Desktop\Чат\ServerMultiRoom\ServerMultiRoom\bin\Debug\ServerMultiRoom.exe
+C:\Users\nikit\Desktop\Чат\ServerMultiRoom\ServerMultiRoom\bin\Debug\ServerMultiRoom.pdb
+C:\Users\nikit\Desktop\Чат\ServerMultiRoom\ServerMultiRoom\bin\Debug\Newtonsoft.Json.dll
+C:\Users\nikit\Desktop\Чат\ServerMultiRoom\ServerMultiRoom\bin\Debug\Newtonsoft.Json.xml
+E:\RoomsChat\ServerMultiRoom\ServerMultiRoom\bin\Debug\Newtonsoft.Json.dll
+E:\RoomsChat\ServerMultiRoom\ServerMultiRoom\bin\Debug\Newtonsoft.Json.xml
